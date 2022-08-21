@@ -1,0 +1,19 @@
+{
+  "name": "creating-first-node-js-server",
+  "version": "1.0.0",
+  "description": "Our first nodejs server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohit-parjapat/CREATING-FIRST-NODE-JS-SERVER.git"
+  },
+  "author": "Rohit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rohit-parjapat/CREATING-FIRST-NODE-JS-SERVER/issues"
+  },
+  "homepage": "https://github.com/Rohit-parjapat/CREATING-FIRST-NODE-JS-SERVER#readme"
+}
