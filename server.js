@@ -28,8 +28,27 @@ http
                         // console.log(chunk);
                     }).on('end', () => {
                         body = JSON.parse(body);
-                        console.log(body);
-                        // response.write(`<table><tr><th>${body.name}</th></tr><tr><td>${body.age}</td></tr></table>`);
+                        let newDetails = myDetails;
+                        newDetails.push(body.item);
+                        console.log(newDetails);
+                    })
+            } else if (method === "DELETE") {
+                let body = '';
+                request
+                    .on('error', (err) => {
+                        console.error(err);
+                    }).on('data', (chunk) => {
+                        body += chunk;
+                    }).on('end', () => {
+                        body = JSON.parse(body);
+                        let deleteItem = body.item;
+                        for (let i = 0; i < myDetails.length; i++) {
+                            if (myDetails[i] === deleteItem) {
+                                myDetails.splice(i, 1);
+                                break;
+                            }
+                            response.writeHead(204);
+                        }
                     })
             } else {
                 response.writeHead(404);
